@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"
+      integrity="sha384-ZbbbT1gw3joYkKRqh0kWyRp32UAvdqkpbLedQJSlnI8iLQcFVxaGyrOgOJiDQTTR"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js//todo_list.js" defer></script>
+    <link rel="stylesheet" href="./css/todo_list.css" />
+    <title>TODO LIST</title>
+  </head>
+  <body id="bodyId">
+    <div class="wrapperBox">
+      <div>
+        <header>TODO LIST:</header>
+        <main>
+          <div class="inputText">
+            <input
+              type="text"
+              class="textField"
+              id="myTodo"
+              placeholder="Type a Todo..."
+            />
+            <button class="addBtn" id="myBtn" onclick="addAtodo()">
+              <i class="far fa-plus-square"></i>
+            </button>
+          </div>
+          <div class="inputText">
+            <input
+              class="textField"
+              type="text"
+              id="search"
+              onkeyup="searchTodo()"
+              placeholder="Search Todo..."
+            />
+          </div>
+          <div class="colorSelect">
+            <button class="inBtn" id="instructionsBtn">
+              Move Mouse to see instructions
+            </button>
+            <label>Select Text Color:</label>
+            <input
+              type="color"
+              class=""
+              id="colorPicker"
+              name="color"
+              value="#000000"
+            />
+            <section class="instructions" id="insBox">
+              <h1>Welcome to TODO-LIST.</h1>
+              <p>1. you can add todos.</p>
+              <p>2. you can search todos.</p>
+              <p>3. you can delete one todo.</p>
+              <p>4. you can delete all todos.</p>
+              <p>5. you can set a color to all todos.</p>
+            </section>
+          </div>
+          <input
+            class="deleteAllBtn"
+            type="button"
+            id="deleteAll"
+            value="Delete All Todos"
+            onclick="removeAllTodo()"
+          />
+          <div id="message"></div>
+          <div class="uLdiv">
+            <ul id="Todo_list"></ul>
+          </div>
+        </main>
+      </div>
+      <footer>
+        &copy; 2020 Arie Goldkin
+        <button class="testMe" id="testMe">Click me!!!</button>
+      </footer>
+    </div>
+  </body>
+</html>
